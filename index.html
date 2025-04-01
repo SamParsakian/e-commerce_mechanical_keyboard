@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<!--  specifying the language of the document as English (en) helps search engines and assistive technologies like screen readers understand and interpret the content appropriately. -->
+<html lang="en">
+   <head>
+      <!-- ............................................................................................... -->
+      <!-- This section initializes the webpage with basic configurations such as character encoding, viewport settings for responsiveness, and links to external CSS files. The Normalize.css library is used to ensure consistent styling across different browsers, while style.css contains custom styles for the webpage. -->
+
+      <meta charset="UTF-8" />
+      <!-- Here ... I thought setting the character encoding to UTF-8 ensures proper handling of various characters across different languages and systems. -->
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>Homepage</title>
+      <!-- Here, I presumed it is vital to provide a clear and descriptive title for the webpage to help users and search engines identify its purpose. -->
+
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      />
+      <!-- At this stage, we require the Normalize.css library to standardize browser styles and improve cross-browser compatibility. -->
+
+      <link rel="stylesheet" href="style.css" />
+      <!-- Now ... it is necessary to link the custom stylesheet (style.css) to define the unique styles for the webpage. -->
+   </head>
+
+   <!--  ...................................................................................................................-->
+   <body>
+      <header>
+         <!-- This section represents the header of the webpage, containing the logo, navigation links, and a search bar for user interaction. -->
+
+         <div class="logo">
+            <img src="images/keyboard-logo.png" alt="Sam Mechanical Keyboard" />
+            <!-- Used an <img> tag to display the logo. The 'alt' attribute provides a text alternative for accessibility and helps with SEO. -->
+
+            <span><strong>Type Smart, Type Strong.</strong></span>
+            <!-- Added a tagline using <span> to group text inline and styled with <strong> for emphasis. -->
+         </div>
+
+         <nav>
+            <ul>
+               <!-- Used <ul> and <li> to create a structured, semantic list of links for the navigation menu. -->
+               <li><a href="/index.html">Start</a></li>
+               <!-- Added a link to the homepage using the relative path '/index.html'. -->
+
+               <li><a href="/analys.html">Analysis</a></li>
+               <!-- Linked to the 'Analysis' page with a relative path to ensure consistent navigation within the same directory structure. -->
+
+               <li><a href="/analysInSwedish.html">analysInSwedish</a></li>
+
+               <li><a href="#">Switches</a></li>
+               <!-- Placeholder link for the Switches section. '#' is used temporarily until a proper URL is added. -->
+
+               <li><a href="#">On&nbsp;Sale</a></li>
+
+               <li><a href="#">News</a></li>
+            </ul>
+         </nav>
+
+         <div class="search-bar">
+            <input type="text" placeholder="Search product" />
+            <!-- Added an input field for the search bar with a placeholder text for user guidance. No form action is included as backend functionality is not implemented yet. -->
+         </div>
+      </header>
+
+      <!--  ...............................................................................................................-->
+      <section class="banner">
+         <!-- Used a <section> element with the class 'banner' to semantically represent a standalone block for the website's banner. -->
+
+         <img src="images/banner1.jpg" alt="Shop banner" />
+         <!-- Used an <img> tag to display the banner image. The 'src' attribute points to the image location, and the 'alt' attribute ensures accessibility and improves SEO by describing the image content. -->
+
+         <h1>Buy<br />Mechanical Keyboard</h1>
+         <!-- Used an <h1> element to define the main heading for this section. Included a <br /> tag for line break to improve readability and adjust the text layout visually. -->
+      </section>
+
+      <!--  .................................................................................................................-->
+      <section class="products">
+         <!-- Used a <section> element with the class 'products' to semantically group the product listing as a distinct block of content. -->
+
+         <div class="product">
+            <img src="images/Mechanincal-Keyboard(1).jpg" alt="Mechanical" />
+            <!-- Used an <img> tag to display the product image. The 'src' attribute links to the image file, and the 'alt' attribute provides a description for accessibility. -->
+
+            <p>33 left in stock</p>
+            <!-- Used a <p> element to display stock information, making it easily readable and semantic. -->
+
+            <h3>Tactile Titan</h3>
+            <!-- Used an <h3> element for the product name, as it is a subheading within the product section. -->
+
+            <span class="price">6489 kr</span>
+            <!-- Used a <span> element with the class 'price' to represent the product price, allowing for specific styling. -->
+         </div>
+
+         <!-- Additional products follow the same structure ............. -->
+
+         <div class="product">
+            <img src="images/Mechanincal-Keyboard(2).jpg" alt="Mechanica2" />
+            <p>172 left in stock</p>
+            <h3>MechaPulse</h3>
+            <span class="price">4889 kr</span>
+         </div>
+         <div class="product">
+            <img src="images/Mechanincal-Keyboard(3).jpg" alt="Mechanica3" />
+            <p>512 left in stock</p>
+            <h3>TypeNova</h3>
+            <span class="price">3389 kr</span>
+         </div>
+         <div class="product">
+            <img src="images/Mechanincal-Keyboard(4).jpg" alt="Mechanica4" />
+            <p>12 left in stock</p>
+            <h3>IronKeys</h3>
+            <span class="price">3689 kr</span>
+         </div>
+         <div class="product">
+            <img src="images/Mechanincal-Keyboard(5).jpg" alt="Mechanica5" />
+            <p>192 left in stock</p>
+            <h3>MetaType</h3>
+            <span class="price">5189 kr</span>
+         </div>
+         <div class="product">
+            <img src="images/Mechanincal-Keyboard(6).jpg" alt="Mechanica6" />
+            <p>112 left in stock</p>
+            <h3>KeyVortex</h3>
+            <span class="price">3189 kr</span>
+         </div>
+         <div class="product">
+            <img src="images/Mechanincal-Keyboard(7).jpg" alt="Mechanica7" />
+            <p>140 left in stock</p>
+            <h3>Capsmith</h3>
+            <span class="price">6189 kr</span>
+         </div>
+         <div class="product">
+            <img src="images/Mechanincal-Keyboard(8).jpg" alt="Mechanica8" />
+            <p>17 left in stock</p>
+            <h3>SwitchSurge</h3>
+            <span class="price">1489 kr</span>
+         </div>
+         <div class="product">
+            <img src="images/Mechanincal-Keyboard(9).jpg" alt="Mechanica9" />
+            <p>21 left in stock</p>
+            <h3>ClickCraft</h3>
+            <span class="price">3189 kr</span>
+         </div>
+         <div class="product">
+            <img src="images/Mechanincal-Keyboard(10).jpg" alt="Mechanica10" />
+            <p>66 left in stock</p>
+            <h3>TypeForge</h3>
+            <span class="price">1789 kr</span>
+         </div>
+         <div class="product">
+            <img src="images/Mechanincal-Keyboard(11).jpg" alt="Mechanica11" />
+            <p>8 left in stock</p>
+            <h3>MechaWave</h3>
+            <span class="price">1389 kr</span>
+         </div>
+         <div class="product">
+            <img src="images/Mechanincal-Keyboard(12).jpg" alt="Mechanica12" />
+            <p>120 left in stock</p>
+            <h3>KeyChronos</h3>
+            <span class="price">2189 kr</span>
+         </div>
+      </section>
+      <!--  ....................................................................................................-->
+
+      <section class="subscription">
+         <!-- Used a <section> element with the class 'subscription' to semantically group the newsletter subscription feature as an independent content block. -->
+
+         <h2>Subscribe to our Newsletter</h2>
+         <!-- Used an <h2> element to provide a heading for the subscription section with logical size.  -->
+
+         <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Exercitationem fuga, odio consectetur est vitae sed alias minima
+            distinctio quam ullam. ipsum dolor, sit amet consectetur adipisicing
+            elit. Quia itaque officia facere tempora accusantium quasi mollitia
+            architecto a fugit quisquam. ipsum dolor, sit amet consectetur
+            adipisicing elit. Quo voluptas iste minima consequuntur? Odit,
+            delectus. Ad cum a vol uptate ducimus perferendis dicta veniam,
+            atque reiciendis illum quisquam, explicabo quos labore!.
+         </p>
+         <!-- Used a <p> element to include descriptive text encouraging users to subscribe. This ensures readability and adheres to semantic HTML. -->
+
+         <input type="email" placeholder="" />
+         <!-- Used an <input> element with type 'email' to accept user input for their email address. The 'type="email"' attribute ensures the input is validated for email format.  -->
+
+         <button>Subscribe</button>
+         <!-- Used a <button> element for the subscription action, allowing users to submit their email address. . -->
+      </section>
+
+      <!--  ......................................................................................................-->
+      <footer>
+         <!-- Used a <footer> element to define the footer section of the webpage, grouping various pieces of information such as About Us, Navigation, Social Media, and Contact Details. -->
+
+         <div class="footer-column1">
+            <h3>About Us</h3>
+            <!-- Used an <h3> element for the heading of the 'About Us' section to maintain a semantic heading hierarchy. -->
+
+            <p>
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
+               veritatis, illo fugit labore eos vel neque quia excepturi et quas
+               obcaecati.
+            </p>
+            <!-- Used multiple <p> elements for descriptive text, ensuring proper grouping and readability of content. -->
+            <p>
+               Amet consectetur adipisicing elit. Nisi veritatis, illo fugit
+               labore eos vel neque quia excepturi et quas obcaecati.
+            </p>
+            <p>
+               Ipsum dolor sit, amet Lorem ipsum dolor sit amet consectetur
+               adipisicing elit. Assumenda sapiente odit facere natus
+               repudiandae ad dolorem unde, sunt eum error ea, modi aliquid
+               doloremque eaque quos non. Molestiae, blanditiis ut. consectetur
+               adipisicing elit. Nisi veritatis, illo fugit labore eos vel neque
+               quia excepturi et quas obcaecati.
+            </p>
+         </div>
+
+         <div class="footer-column2">
+            <h3>Navigation</h3>
+            <!-- Used an <h3> element for the 'Navigation' section header. -->
+
+            <ul>
+               <!-- Used an unordered list (<ul>) to group navigation links semantically. -->
+               <li><a href="/index.html">Start</a></li>
+               <li><a href="/analys.html">Analysis</a></li>
+               <li><a href="/analysInSwedish.html">analysInSwedish</a></li>
+               <li><a href="#">Switches </a></li>
+               <li><a href="#">On Sale</a></li>
+               <li><a href="#">News</a></li>
+               <!-- Each <li> contains a <a> element linking to corresponding sections. '#' is used as a placeholder for the URLs. -->
+            </ul>
+         </div>
+
+         <div class="footer-column3">
+            <h3>General Information?</h3>
+            <!-- Used an <h3> element to provide a heading for general information. -->
+
+            <ul>
+               <!-- Used an unordered list (<ul>) to group links to general information resources without needing to go up to header to navigate to other pages. -->
+               <li><a href="">Repudiandae sint nobis eius!</a></li>
+               <li><a href="">Lorem, ipsum dolor sit!</a></li>
+               <li><a href="">Amet adipisicing elit!</a></li>
+               <li><a href="">Consectetur totam libero?</a></li>
+               <li><a href="">Vero reprehenderit ipsa!</a></li>
+               <!-- Added <li> elements containing <a> tags for linking to various resources. The 'href' attributes are placeholders for now and in future we can design respective pages for more information. -->
+            </ul>
+
+            <div class="footer-column4">
+               <h3>Social-media</h3>
+               <!-- Used an <h3> element for the heading of the 'Social-media' section. -->
+
+               <ul>
+                  <!-- Used an unordered list (<ul>) to group social media links for better structure and semantic organization. -->
+
+                  <li>
+                     <a href="https://www.youtube.com">
+                        <img src="images/Youtube-icon.png" alt="YouTube" />
+                     </a>
+                     <!-- Used an <img> element within an <a> tag to create a clickable social media icon. The 'alt' attribute provides descriptive text for users who may not see the image (e.g., due to screen readers or slow loading). This also improves accessibility and SEO. -->
+                  </li>
+
+                  <li>
+                     <a href="https://www.facebook.com">
+                        <img src="images/facebook-icon.png" alt="Facebook" />
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="https://www.instagram.com">
+                        <img src="images/instagram-icon.png" alt="Instagram" />
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="footer-column5">
+            <h3>Contacts</h3>
+
+            <p>123 Street Name, City</p>
+            <p>+1 234 567 890</p>
+         </div>
+      </footer>
+   </body>
+</html>

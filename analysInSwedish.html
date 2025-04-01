@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="sv">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>analysInSwedish</title>
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      />
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <!--  ........................................................................-->
+   <body>
+      <header>
+         <div class="logo">
+            <img
+               src="images/keyboard-logo.png"
+               alt="Sam Mekaniska Tangentbord"
+            />
+            <span><strong>Skriv Smart, Skriv Stark.</strong></span>
+         </div>
+         <nav>
+            <ul>
+               <li><a href="/index.html">Start</a></li>
+               <li><a href="/analys.html">Analys</a></li>
+               <li><a href="/analysInSwedish.html">analysInSwedish</a></li>
+               <li><a href="#">Tangentswitchar </a></li>
+               <li><a href="#">Rea</a></li>
+               <li><a href="#">Nyheter</a></li>
+            </ul>
+         </nav>
+         <div class="search-bar">
+            <input type="text" placeholder="Sök produkt" />
+         </div>
+      </header>
+
+      <section class="banner">
+         <img src="images/banner1.jpg" alt="Butiksbanner" />
+         <h1>Köp<br />Mekaniska Tangentbord</h1>
+      </section>
+      <!--  ........................................................................-->
+      <main class="questions">
+         <div class="header">
+            <h3>Analystext av Samuel Parsakian</h3>
+            <p>Examinationsuppgift i Webbutveckling med HTML & CSS - WUH100</p>
+            <p>1985-08-28</p>
+            <div class="line"></div>
+         </div>
+
+         <section>
+            <h1>1. Introduktion</h1>
+            <p>
+               Syftet med uppgiften var att bygga en responsiv webbsida som
+               visar produkter, är användarvänlig och visuellt tilltalande. Jag
+               använde HTML och CSS för att strukturera och utforma sidan, med
+               fokus på att implementera goda webbutvecklingsprinciper som
+               layout, typografi och optimering. (<strong>
+                  Obs: Även om kommentarer i HTML och CSS har ett helt annat
+                  syfte beslutade jag mig för att inkludera mer detaljerade
+                  förklaringar i HTML- och CSS-filerna som kommentarer för att
+                  klargöra skälen bakom användningen av dessa queries. </strong
+               >)
+            </p>
+         </section>
+
+         <section>
+            <h1>2. Programmeringsval</h1>
+            <p>
+               Jag byggde sidan med HTML5 för strukturen och CSS för stilen. För
+               att säkerställa att designen ser konsekvent ut över olika
+               webbläsare började jag med Normalize.css för att återställa
+               standardstilar.
+            </p>
+
+            <h3>2.1 HTML5</h3>
+            <p>
+               Följande exempelprojektet använde jag HTML5 för att lägga till
+               flera funktioner: en header med en logotyp, en navigeringsmeny
+               och en sökfält för snabb åtkomst till viktiga sektioner.
+               Huvudsektionen av sidan inkluderar en banner som framhäver
+               butikens syfte, följt av ett produktgalleri som visar bilder,
+               beskrivningar och priser för enkel jämförelse. Det finns också en
+               prenumerationssektion för att uppmuntra besökare att registrera
+               sig för nyhetsbrevet.
+            </p>
+            <p>
+               Sidfoten är uppdelad i kolumner som ger detaljerad information om
+               varumärket, navigeringslänkar, kontaktuppgifter och sociala
+               medieikoner. Denna layout skapar ett smidigt flöde från
+               introduktion till interaktion, vilket gör det enkelt för besökare
+               att bläddra på sidan och interagera med innehållet.
+            </p>
+         </section>
+
+         <h3>2.2 CSS Återställning</h3>
+         <p>
+            Jag använde Normalize.min.css för att säkerställa att webbsidan ser
+            konsekvent ut i olika webbläsare. Det är en vanlig och rekommenderad
+            praxis för att uppnå enhetlig rendering. Som MDN Web Docs förklarar,
+            "Om du verkligen behöver använda en återställning, överväg att
+            använda Normalize.css av Nicolas Gallagher, som syftar till att göra
+            saker mer konsekventa över webbläsare" (MDN Web Docs, 2025).
+         </p>
+         <p>
+            För att hålla saker konsekventa och lätta att underhålla använde jag
+            en extern style.css-fil tillsammans med HTML-strukturen. Detta
+            stylesheet hanterar sidans visuella design, såsom typografi, layout
+            och responsivitet, samtidigt som innehåll och design hålls separata.
+            Nyckeldelar av sidan, såsom headern, produktgalleriet och sidfoten,
+            utformades för att skapa ett enhetligt och professionellt utseende.
+         </p>
+
+         <h3>2.3 Boxmodell</h3>
+         <p>
+            "box-sizing: border-box;" användes för att inkludera marginaler,
+            padding och ramar i elementens totala storlek. Detta var särskilt
+            viktigt för att matcha exempelprojektet, som att justera listor i
+            sidfoten direkt under relevanta rubriker genom att justera padding
+            och marginaler. Följande är en bild från Chrome-webbläsarens
+            boxmodell, tagen från ul-element i sidfoten. Och samma berättelse
+            gäller här och där för att uppnå samma önskade resultat för
+            justeringar.
+         </p>
+         <img src="/images/analys1.jpg" alt="" />
+
+         <h3>2.4 Enheter</h3>
+         <p>
+            För att göra designen responsiv använde jag pixlar (px) för fasta
+            storlekar som logotypen, medan procent eller viewport-breddenheter
+            (vw) användes för flexibla element. Till exempel sattes
+            bannerbildens bredd till auto och höjden till 100 %, vilket gjorde
+            att den kunde anpassa sig smidigt till olika skärmstorlekar. Jag
+            lade också till CSS-brytpunkter för att ändra layouten baserat på
+            specifika viewport- bredder för bättre anpassningsförmåga.
+         </p>
+
+         <ul>
+            <li>Skrivbord: min-width: 1200px</li>
+            <li>Surfplatta: min-width: 768px och max-width: 1199px</li>
+            <li>
+               Stora telefoner (Phablet): min-width: 576px och max-width: 767px
+            </li>
+            <li>Små telefoner: max-width: 575px</li>
+         </ul>
+         <p>
+            Dessa brytpunkter hjälper till att optimera användarupplevelsen över
+            en rad olika enheter (Hoverify, 2024).
+         </p>
+
+         <section>
+            <h1>3. Layout</h1>
+            <p>
+               I min CSS-fil använde jag olika layouttekniker för att göra
+               webbsidan responsiv och välorganiserad. Till exempel använde jag
+               regeln @font-face för att inkludera anpassade typsnitt som
+               "Selawik," vilket tillför typografisk konsekvens till sidan. I
+               headern tillämpade jag Flexbox med "display: flex;" för att
+               justera logotypen, navigeringsmenyn och sökfältet i en
+               horisontell layout, vilket säkerställde flexibilitet och
+               anpassningsförmåga. För klassen .products använde jag CSS Grid
+               Layout med "display: grid;" och "grid-template-columns: repeat(4,
+               1fr);" för att skapa ett produktgalleri. Antalet kolumner
+               justeras automatiskt baserat på skärmstorleken för bästa visning
+               över enheter.
+            </p>
+
+            <h3>3.1 Navigation</h3>
+            <p>
+               Jag tog bort standardliststilar från navigeringslänkarna genom
+               att ställa in "list-style-type: none;" och rensade
+               standardmarginaler och padding med "margin: 0;" och "padding:
+               0;". För att arrangera navigeringslänkarna i en horisontell linje
+               tillämpade jag "display: flex;" på "ul"-elementet, vilket gjorde
+               det enkelt att justera och placera objekten. Varje "a"-tagg i
+               navigeringen stylades med "display: block;", "padding: 10px
+               15px;", "text-decoration: none;", "border: 2px solid #000;",
+               "border-radius: 5px;", "color: #000;" och "background-color:
+               #f9f9f9;" för att ge det ett knapp-liknande utseende. För
+               interaktivitet lade jag till en hovringseffekt med "nav a:hover {
+               background-color: #000; color: #fff; }", vilket ändrar bakgrunds-
+               och textfärger när användaren hovrar över länkarna.
+            </p>
+         </section>
+
+         <h3>3.2 Sidfot</h3>
+         <p>
+            Jag designade sidfoten med hjälp av CSS Grid Layout genom att ställa
+            in "display: grid;" och "grid-template-columns: repeat(4, 1fr);",
+            vilket skapar fyra lika stora kolumner för att snyggt fördela
+            innehållet. För att göra den responsiv använde jag media queries för
+            att minska antalet kolumner på mindre skärmar, vilket säkerställer
+            att sidfoten förblir användarvänlig på olika enheter. Denna metod
+            stämmer överens med etablerade bästa praxis för responsiv
+            sidfotsdesign, som diskuterats i "Building a Responsive Footer: A
+            Guide to HTML and CSS Techniques" (Musing, 2025).
+         </p>
+
+         <h3>3.3 CSS Grid</h3>
+         <p>
+            Jag använde CSS Grid Layout för att designa en responsiv layout. I
+            sektionen .products satte jag upp en grid-container med "display:
+            grid;" och definierade kolumnerna med "grid-template-columns:
+            repeat(4, 1fr);", vilket skapade fyra jämnt fördelade kolumner. För
+            att göra layouten anpassningsbar för olika skärmstorlekar lade jag
+            till media queries som justerar antalet kolumner baserat på
+            viewport- bredden.
+         </p>
+
+         <h3>3.4 Flexbox</h3>
+         <p>
+            Jag använde Flexbox-layouten för att skapa en responsiv och flexibel
+            struktur. I headersektionen tillämpade jag "display: flex;" för att
+            sätta upp en flex-container, vilket gjorde det möjligt för
+            barnelementen—som logotypen, navigeringsmenyn och sökfältet—att
+            justera sig horisontellt. Dessa Flexbox-egenskaper bidrar till en
+            ren och anpassningsbar layout, vilket förbättrar responsiviteten
+            över olika skärmstorlekar (Coyier, 2024).
+         </p>
+
+         <h3>3.5 Avstånd</h3>
+         <p>
+            Jag använde marginaler och padding för att säkerställa läsbart
+            avstånd. Till exempel fick produktkort "padding: 10px;" för att
+            skapa utrymme runt innehållet och "gap: 20px;" för att hålla korten
+            snyggt separerade.
+         </p>
+
+         <h3>3.6 Typografi</h3>
+         <p>
+            Jag använde anpassade typsnitt med "@font-face" och satte 16px som
+            grundstorlek för typsnitt. För bättre läsbarhet tillämpade jag
+            "font-weight: 800;" på rubriker och "line-height: 1.6;" på stycken.
+         </p>
+
+         <section>
+            <h1>4. Brytpunkter</h1>
+            <p>
+               Jag använde media queries för att ställa in brytpunkter vid
+               1200px, 768px och 575px. På mindre skärmar minskas antalet
+               produktkolumner till två och till slut en, och element i headern
+               staplas vertikalt för bättre användarvänlighet.
+            </p>
+         </section>
+
+         <section>
+            <h1>5. Bildoptimering</h1>
+            <p>
+               Jag optimerade bilderna genom att tillämpa "max-width: 100%;" och
+               "height: auto;" för att säkerställa att de anpassar sig korrekt
+               till det tillgängliga utrymmet utan att överstiga behållarens
+               bredd. Detta tillvägagångssätt användes för element som
+               produktbilder och bannerbilden, vilket gjorde det möjligt för dem
+               att skalas sömlöst och bibehålla sina proportioner över olika
+               skärmstorlekar, vilket säkerställer en konsekvent och responsiv
+               layout.
+            </p>
+         </section>
+
+         <section>
+            <h1>6. Utskrift</h1>
+            <p>
+               Jag anpassade utskriftsinställningarna för att skapa en ren och
+               läsbar version av webbsidan, med fokus på viktig information som
+               produktlistor samtidigt som icke-nödvändiga element som headers,
+               banners och sökfält döljs. Till exempel använde jag en
+               tvåkolumnslayout för att göra produktdetaljer tydliga och lätta
+               att läsa på standard A4-papper. Dock kan sidfoten fortfarande
+               visas i den utskrivna PDF-filen på grund av webbläsarens standard
+               utskriftsinställningar.
+            </p>
+         </section>
+
+         <section>
+            <h1>7. Kompatibilitet</h1>
+            <p>
+               Jag använde moderna HTML5- och CSS-funktioner, såsom Grid och
+               Flexbox, som är kompatibla med de flesta moderna webbläsare. Till
+               exempel testades sidan grundligt i Chrome och Firefox för att
+               bekräfta korrekt funktionalitet och responsivitet. Även om vissa
+               äldre webbläsare kanske inte fullt ut stöder dessa avancerade
+               egenskaper, tog jag extra steg för att kontrollera deras
+               kompatibilitet med verktyg som [Can I Use](https://caniuse.com/).
+               Detta säkerställde att webbsidan skulle prestera väl för
+               majoriteten av användarna samtidigt som den utnyttjade de senaste
+               webbutvecklingsteknikerna. Gröna rutor i följande bilder visar
+               tillgängligheten av Flexbox i olika webbläsare (Can I Use, 2024).
+            </p>
+            <img src="/images/analys2.jpg" alt="" />
+         </section>
+
+         <section>
+            <h1>8. Buggar och problem</h1>
+            <p>
+               En utmaning jag stötte på var att vissa element inte skalade
+               ordentligt på mindre skärmar. För att åtgärda detta justerade jag
+               media queries och lade till "overflow: hidden;" till bannern,
+               vilket förhindrade layoutproblem och säkerställde en smidigare
+               visning. Ett annat problem jag identifierade med [W3C
+               Validator](https://validator.w3.org/nu/#file) var den felaktiga
+               användningen av "articl>"-taggen för att separera produkter.
+               Validatorn framhävde att en "header" krävdes för varje "article"-
+               element. För att lösa detta ersatte jag "articl>" med
+               "div"-taggar, vilket rättade till problemet och förbättrade
+               HTML-strukturens semantiska noggrannhet.
+            </p>
+         </section>
+
+         <section>
+            <h1>9. Sammanfattning</h1>
+            <p>
+               Jag närmade mig denna uppgift med ett tydligt mål att bygga en
+               responsiv och visuellt tilltalande webbplats, vilket gav mig
+               möjlighet att öva och förfina viktiga webbutvecklingsfärdigheter.
+               Den mest utmanande delen var att försöka replikera de exakta
+               resultaten från exempelprojektet, särskilt att omorganisera
+               sidfotskolumnerna för olika skärmstorlekar. Att använda CSS Grid
+               och Flexbox för layouten var svårt till en början, särskilt att
+               se till att designen anpassades väl till olika skärmbredder. Dock
+               visade sig struktureringen av sidan med HTML5 vara enklare än jag
+               förväntade mig, eftersom dess element är intuitiva och enkla.
+               Optimering av bilder och säkerställande av
+               webbläsarkompatibilitet krävde lite extra ansträngning, men det
+               var en värdefull inlärningsupplevelse. Sammantaget hjälpte detta
+               projekt mig inte bara att förbättra mina tekniska färdigheter
+               utan också att stärka mitt självförtroende inom webbutveckling.
+            </p>
+         </section>
+
+         <section>
+            <h1>Referenser</h1>
+            <ul>
+               <li>
+                  Can I Use. (2024, 7 april). CSS Flexible Box Layout Module.
+                  Hämtad 17 januari 2025 från https://caniuse.com/?search=flex
+               </li>
+               <li>
+                  Coyier, C. (2024, 12 augusti). CSS flexbox layout guide.
+                  CSS-Tricks. Hämtad 17 januari 2025 från
+                  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+               </li>
+               <li>
+                  Hoverify. (2024, 14 september). Responsive design breakpoints:
+                  2024 guide. Hämtad 17 januari 2025 från
+                  https://tryhoverify.com/blog/responsive-design-breakpoints-2024-guide/
+               </li>
+               <li>
+                  MDN Web Docs. (2025, 17 januari). Guidelines for writing CSS
+                  code examples. Hämtad från
+                  https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
+               </li>
+               <li>
+                  Musing, M. (2025, 17 januari). Building a responsive footer: A
+                  guide to HTML and CSS techniques. Hämtad från
+                  https://basedash.com/blog/responsive-footer-html-css-guide
+               </li>
+            </ul>
+         </section>
+      </main>
+
+      <!--  ........................................................................-->
+      <footer>
+         <div class="footer-column1">
+            <h3>Om Oss</h3>
+            <p>
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
+               veritatis, illo fugit labore eos vel neque quia excepturi et quas
+               obcaecati.
+            </p>
+            <p>
+               Amet consectetur adipisicing elit. Nisi veritatis, illo fugit
+               labore eos vel neque quia excepturi et quas obcaecati.
+            </p>
+            <p>
+               Ipsum dolor sit, amet Lorem ipsum dolor sit amet consectetur
+               adipisicing elit. Assumenda sapiente odit facere natus
+               repudiandae ad dolorem unde, sunt eum error ea, modi aliquid
+               doloremque eaque quos non. Molestiae, blanditiis ut. consectetur
+               adipisicing elit. Nisi veritatis, illo fugit labore eos vel neque
+               quia excepturi et quas obcaecati.
+            </p>
+         </div>
+         <div class="footer-column2">
+            <h3>Navigering</h3>
+            <ul>
+               <li><a href="/index.html">Start</a></li>
+               <li><a href="/analys.html">Analys</a></li>
+               <li><a href="/analysInSwedish.html">analysInSwedish</a></li>
+               <li><a href="#">Tangentswitchar </a></li>
+               <li><a href="#">Rea</a></li>
+               <li><a href="#">Nyheter</a></li>
+            </ul>
+         </div>
+         <div class="footer-column3">
+            <h3>Allmän Information?</h3>
+            <ul>
+               <li><a href="">Repudiandae sint nobis eius!</a></li>
+               <li><a href="">Lorem, ipsum dolor sit!</a></li>
+               <li><a href="">Amet adipisicing elit!</a></li>
+               <li><a href="">Consectetur totam libero?</a></li>
+               <li><a href="">Vero reprehenderit ipsa!</a></li>
+            </ul>
+         </div>
+         <div class="footer-column4">
+            <h3>Sociala medier</h3>
+            <ul>
+               <li>
+                  <a href="https://www.youtube.com"
+                     ><img src="images/Youtube-icon.png" alt="YouTube"
+                  /></a>
+               </li>
+               <li>
+                  <a href="https://www.facebook.com"
+                     ><img src="images/facebook-icon.png" alt="Facebook"
+                  /></a>
+               </li>
+               <li>
+                  <a href="https://www.instagram.com"
+                     ><img src="images/instagram-icon.png" alt="Instagram"
+                  /></a>
+               </li>
+            </ul>
+         </div>
+         <div class="footer-column5">
+            <h3>Kontakter</h3>
+            <p>123 Gatunamn, Stad</p>
+            <p>+1 234 567 890</p>
+         </div>
+      </footer>
+
+      <!--  ........................................................................-->
+   </body>
+</html>

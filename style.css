@@ -1,0 +1,652 @@
+/* part1 ------------------------------------------------------------ */
+
+/* Font face definitions for custom fonts */
+@font-face {
+   font-family: "Selawik";
+   src: url("fonts/selawregular.woff2") format("woff2"),
+      url("fonts/selawregular.woff") format("woff");
+   /* Declared two font formats (WOFF2 and WOFF) for broad browser compatibility. WOFF2 is more efficient, while WOFF serves as a fallback. */
+   font-weight: 400; /* Regular weight */
+   font-style: normal; /* Normal (non-italic) style */
+}
+
+@font-face {
+   font-family: "Selawik";
+   src: url("fonts/selawksemibold.woff2") format("woff2"),
+      url("fonts/selawksemibold.woff") format("woff");
+   /* This defines the semibold variant of the "Selawik" font. It's used for emphasis on headings and important text. */
+   font-weight: 600; /* Semibold weight */
+   font-style: normal; /* Normal style */
+}
+
+/* Body styles for consistent base layout */
+body {
+   font-family: "Selawik", sans-serif;
+   /* Set the custom "Selawik" font as primary, with "sans-serif" as a fallback for unsupported cases. */
+   font-weight: 400; /* Default to regular weight for body text. */
+   line-height: 1.6; /* Line height ensures better readability by maintaining appropriate spacing between lines. */
+   margin: 0;
+   padding: 0; /* Reset margin and padding to avoid browser default styling discrepancies. */
+   box-sizing: border-box; /* Use border-box model to include padding and border in element width/height calculations. */
+   max-width: 1300px; /* Restrict the maximum width of content for readability on larger screens. */
+   margin: auto; /* Center the content horizontally within the viewport. */
+}
+
+/* H1 styles */
+h1 {
+   font-weight: 800; /* Use a heavier weight explicitly for emphasis on main headings. */
+   margin: 45px 0 0; /* Add spacing above the heading for separation but avoid bottom margin to keep sections tight. */
+}
+
+/* Shared styles for H2, H4, H5, and H6 headings */
+h2,
+h4,
+h5,
+h6 {
+   font-weight: 600; /* Apply semibold weight for secondary headings. */
+   margin: 0 1px; /* Maintain a tight margin with minimal spacing for compact layout. */
+}
+
+/* H3-specific styles */
+h3 {
+   margin: 35px 0 0; /* Add a consistent top margin for visual hierarchy but no bottom margin to keep sections close just to make our project more like the desired example project. */
+}
+
+/* Image styles */
+img {
+   max-width: 100%; /* Ensure images scale responsively and do not overflow their containers. */
+}
+
+/* Paragraph styles */
+p {
+   margin: 5px 0 5px; /* Add minimal spacing above and below paragraphs for clarity while maintaining compactness. */
+}
+
+/* Questions section styles */
+.questions {
+   padding: 50px 130px; /* Add padding to create whitespace inside the "questions" container for better visual spacing. */
+}
+
+.line {
+   border-top: 1px solid black;
+   margin-top: 10px;
+}
+
+/* part 2------------------------------------------------------------ */
+header {
+   display: flex;
+   /* Used flexbox to create a flexible layout for aligning header content. */
+   justify-content: space-between;
+   /* Distribute space evenly between child elements, placing them at the ends. */
+   align-items: center;
+   /* Vertically center-align the header elements. */
+   padding: 5px 5px;
+   /* Add padding for spacing inside the header. */
+   background-color: #fff;
+   /* Set a white background for the header. */
+}
+
+.logo {
+   display: flex;
+   flex-direction: column; /* Stack logo elements vertically. */
+   align-items: center; /* Center-align elements horizontally. */
+   text-align: center; /* Align text centrally within the container. */
+}
+
+.logo img {
+   width: 150px; /* Set a fixed width for the logo image. */
+   height: auto; /* Maintain the image's aspect ratio. */
+}
+
+.logo span {
+   font-size: 15px; /* Adjust the font size for the tagline. */
+   font-weight: 100; /* Use a light font weight for a subtle appearance. */
+   color: hsl(0, 0%, 0%); /* Set text color to black using HSL notation. */
+}
+
+nav ul {
+   display: flex; /* Use flexbox to arrange navigation links. */
+   gap: 15px; /* Add spacing between list items. */
+   list-style: none; /* Remove default bullet points for list items. */
+   margin: 10px 0; /* Add vertical spacing. */
+   padding: 0; /* Remove default padding. */
+}
+
+.search-bar input {
+   width: 350px; /* Set the input's width. */
+   margin: 0 10px; /* Add horizontal margin for spacing. */
+   padding: 15px; /* Add padding inside the input field for better usability. */
+   border-radius: 5px; /* Add rounded corners for aesthetic purposes. */
+}
+
+nav a {
+   display: block; /* Ensure the clickable area covers the entire element. */
+   padding: 10px 15px; /* Add padding for spacing around the text. */
+   text-decoration: none; /* Remove underline from links. */
+   border: 2px solid #000; /* Add a black border around the link. */
+   border-radius: 5px; /* Add rounded corners to the link. */
+   color: #000; /* Set the link text color to black. */
+   background-color: #f9f9f9; /* Use a light gray background for contrast. */
+}
+
+nav a:hover {
+   background-color: #000; /* Change background color to black on hover. */
+   color: #fff; /* Change text color to white on hover. */
+}
+
+@media (max-width: 1200px) {
+   header {
+      transform: scale(0.9); /* Shrink the entire header for smaller screens. */
+      transition: transform 0.3s ease; /* Smooth transition effect during resizing. */
+   }
+}
+
+@media (max-width: 1000px) {
+   header {
+      transform: scale(
+         0.8
+      ); /* Further shrink the header for narrower screens. */
+   }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   header {
+      transform: scale(
+         1
+      ); /* Restore normal scale when stacking content vertically. */
+      flex-direction: column; /* Stack header elements vertically for smaller screens. */
+      align-items: center; /* Center-align all items. */
+      gap: 20px; /* Add spacing between stacked elements. */
+   }
+
+   .logo {
+      margin-bottom: 5px; /* Add space below the logo for better spacing. */
+   }
+
+   nav ul {
+      flex-direction: row; /* Arrange navigation links in a single row. */
+      flex-wrap: wrap; /* Allow wrapping for better fit on smaller screens. */
+      justify-content: center; /* Center-align the navigation links. */
+      gap: 10px; /* Reduce gap between items for compact layout. */
+      margin: 5px; /* Add margin around the navigation links. */
+   }
+
+   .search-bar {
+      margin: 5px; /* Add margin around the search bar for spacing. */
+      width: 100%; /* Stretch the search bar to fit the container width. */
+      display: flex; /* Use flexbox to align the search input. */
+      justify-content: center; /* Center-align the search input within the container. */
+   }
+
+   .search-bar input {
+      width: 90%; /* Adjust the search input size for smaller screens. */
+   }
+}
+
+/* part 3------------------------------------------------------------ */
+.banner {
+   position: relative;
+   /* Sets the banner as a positioned container, allowing child elements to be absolutely positioned relative to it. */
+   overflow: hidden;
+   /* Ensures that the banner image or other elements do not overflow the container. */
+   width: 100%;
+   /* Sets the banner to span the full width of its container or viewport. */
+   height: 200px;
+   /* Sets a fixed height for the banner to ensure consistent layout. */
+   display: flex;
+   /* Uses flexbox for easy alignment of the banner's child elements. */
+   justify-content: center;
+   /* Centers child elements horizontally within the banner. */
+   align-items: center;
+   /* Centers child elements vertically within the banner. */
+   text-align: center;
+   /* Ensures any text inside the banner is centrally aligned. */
+}
+
+.banner img {
+   position: absolute;
+   /* Positions the image relative to the `.banner` container. */
+   top: 50%;
+   left: 50%;
+   /* Moves the image's center point to the middle of the container. */
+   transform: translate(-50%, -50%);
+   /* Adjusts the image's position so its center aligns with the container's center. */
+   width: auto;
+   /* Allows the image width to adjust automatically to maintain aspect ratio. */
+   height: 100%;
+   /* Makes the image fill the height of the container while keeping aspect ratio. */
+   object-fit: cover;
+   /* Ensures the image scales to cover the container completely, cropping if necessary. */
+   pointer-events: none;
+   /* Prevents users from selecting or interacting with the image. */
+}
+
+.banner h1 {
+   position: relative;
+   /* Keeps the heading positioned relative to its parent container. */
+   font-size: calc(2rem + 1vw);
+   /* Dynamically adjusts the font size based on the viewport width, ensuring responsiveness. */
+   line-height: 1.2;
+   /* Sets the line height for the heading text to control spacing between lines. */
+   color: rgb(228, 34, 28);
+   /* Applies a dark red color to the heading text. */
+   margin: 0;
+   /* Removes default margin to ensure precise positioning. */
+}
+
+/* part 4 ------------------------------------------------------------ */
+.products {
+   display: grid;
+   /* Uses CSS Grid to layout the product items in a structured grid format. */
+   grid-template-columns: repeat(4, 1fr);
+   /* Creates 4 equal-width columns by default, with each column taking a fraction of the available space. */
+   gap: 20px;
+   /* Adds spacing between grid items for better visual separation. */
+   padding: 20px;
+   /* Adds padding around the grid container to create space inside the container's edges. */
+}
+
+.product {
+   text-align: center;
+   /* Center-aligns all text and inline content within each product card. */
+   border: 1px solid #f8f7f7;
+   /* Adds a light border around each product card for definition. */
+   padding: 10px;
+   /* Adds spacing inside the product card for better content layout. */
+   box-shadow: 0 4px 8px rgba(72, 69, 69, 0.425);
+   /* Adds a subtle shadow effect for depth and visual hierarchy. */
+}
+
+.product img {
+   height: 60px;
+   /* Fixes the height of product images to maintain uniformity. */
+   margin-bottom: 10px;
+   /* Adds spacing below the image to separate it from other elements. */
+}
+
+.product h3,
+.product .price,
+.product p {
+   margin: 5px 0;
+   /* Applies consistent spacing above and below these elements for a uniform layout. */
+}
+
+.product h3,
+.product .price {
+   text-align: left;
+   /* Aligns product name and price to the left for better readability. */
+   width: 100%;
+   /* Ensures these elements span the full width of their container. */
+}
+
+.product .price {
+   display: block;
+   /* Makes the price a block-level element to occupy its own line. */
+   font-weight: bold;
+   /* Highlights the price by making it bold. */
+   color: green;
+   /* Uses green to emphasize the price visually. */
+   margin-top: 5px;
+   /* Adds spacing above the price to separate it from other elements. */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1199px) {
+   /* Adjust layout for laptops with smaller screens. */
+   .products {
+      grid-template-columns: repeat(3, 1fr);
+      /* Changes to 3 columns to better fit the available space. */
+   }
+}
+
+@media (max-width: 767px) {
+   /* Adjust layout for larger mobile screens or tablets. */
+   .products {
+      grid-template-columns: repeat(2, 1fr);
+      /* Reduces to 2 columns for better fit on smaller screens. */
+   }
+}
+
+@media (max-width: 575px) {
+   /* Adjust layout for smaller mobile screens. */
+   .products {
+      grid-template-columns: repeat(1, 1fr);
+      /* Switches to a single column for small screens to ensure readability and usability. */
+   }
+}
+
+/* part 5 ------------------------------------------------------------ */
+.subscription {
+   background-color: #ffeb3b;
+   /* Bright yellow background to make the subscription section stand out. */
+   color: #000;
+   /* Black text color for high contrast with the yellow background. */
+   text-align: center;
+   /* Center-aligns heading, paragraph, and other text elements. */
+   padding: 50px 20px;
+   /* Adds padding to create space inside the section for better layout. */
+   margin: 100px auto;
+   /* Adds vertical spacing above and below, and centers the section horizontally. */
+}
+
+.subscription h2 {
+   font-size: 24px;
+   /* Sets a readable font size for the section heading. */
+   font-weight: bold;
+   /* Makes the heading text bold to emphasize it. */
+   margin-bottom: 20px;
+   /* Adds spacing below the heading to separate it from the following content. */
+}
+
+.subscription p {
+   font-size: 16px;
+   /* Sets a standard font size for the paragraph text. */
+   line-height: 1.6;
+   /* Improves readability by adding space between lines of text. */
+   text-align: justify;
+   /* Aligns text evenly on both sides for a clean, professional appearance. */
+   margin: 0 auto 30px;
+   /* Centers the paragraph horizontally and adds spacing below it. */
+   max-width: 900px;
+   /* Limits the width of the paragraph to maintain readability on wider screens. */
+}
+
+.subscription input[type="email"],
+.subscription button {
+   padding: 10px;
+   /* Adds internal spacing for better usability. */
+   font-size: 16px;
+   /* Ensures a readable font size for both the input and button. */
+   border-radius: 4px;
+   /* Adds rounded corners for a modern design. */
+}
+
+.subscription input[type="email"] {
+   width: 380px;
+   /* Sets a fixed width for the email input field. */
+   border: 1px solid #ccc;
+   /* Adds a light gray border for a subtle, polished look. */
+}
+
+.subscription button {
+   margin: 10px 0;
+   /* Adds vertical spacing around the button. */
+   padding: 10px 20px;
+   /* Increases the button size for easier interaction. */
+   color: #fff;
+   /* White text color for contrast with the button background. */
+   background-color: #000;
+   /* Sets a black background for the button to make it prominent. */
+   border: none;
+   /* Removes the default button border for a cleaner appearance. */
+   cursor: pointer;
+   /* Changes the cursor to a pointer to indicate interactivity. */
+}
+
+.subscription button:hover {
+   background-color: #333;
+   /* Changes the button background to a slightly lighter black when hovered over. */
+}
+
+/* Media query for screen sizes <= 575px */
+@media (max-width: 575px) {
+   .subscription input[type="email"],
+   .subscription button {
+      display: block;
+      /* Stacks the input and button vertically for smaller screens. */
+      width: 100%;
+      /* Ensures they take the full width of the container for better usability. */
+      box-sizing: border-box;
+      /* Includes padding and border in the element's total width calculation. */
+      margin: 10px auto;
+      /* Centers the elements and adds spacing around them. */
+   }
+
+   .subscription button {
+      padding: 10px;
+      /* Adjusts button padding for a better look on small screens. */
+   }
+}
+
+/*  part 6------------------------------------------------------------ */
+
+footer {
+   display: grid;
+   /* Uses CSS Grid to create a flexible layout for the footer. */
+   grid-template-columns: repeat(4, 1fr);
+   /* Defines four equal-width columns in the grid by default. */
+   gap: 20px;
+   /* Adds spacing between grid items. */
+   background-color: #333;
+   /* Sets a dark gray background color for contrast. */
+   color: #fff;
+   /* Sets the text color to white for readability against the dark background. */
+   padding: 10px;
+   /* Adds internal spacing inside the footer. */
+   margin-bottom: 25px;
+   /* Creates spacing below the footer. */
+}
+
+footer .footer-column1,
+footer .footer-column2,
+footer .footer-column3,
+footer .footer-column4,
+footer .footer-column5 {
+   margin: 20px 0;
+   /* Adds vertical spacing inside each column for better layout. */
+}
+
+footer .footer-column3 {
+   margin-right: 0;
+   /* Removes right margin for alignment purposes. */
+}
+
+footer .footer-column4 {
+   justify-content: flex-start;
+   /* Aligns content to the start of the column. */
+   margin-top: 30px;
+   /* Adds extra space above the column. */
+}
+
+footer h3 {
+   margin: 20px 0 5px;
+   /* Adds spacing above and below footer headings for separation. */
+}
+
+.footer-column4 h3 {
+   margin: 0;
+   /* Removes margin for a compact layout. */
+   align-self: flex-start;
+   /* Aligns the heading to the top of the column. */
+   text-align: left;
+   /* Aligns text to the left for consistency. */
+}
+
+footer ul {
+   margin: 5px 0;
+   /* Adds vertical spacing for lists. */
+   padding: 0 20px;
+   /* Adds horizontal padding for list items. */
+}
+
+.footer-column3 ul {
+   padding: 0;
+   /* Removes padding for better alignment. */
+}
+
+.footer-column3 li,
+.footer-column4 li {
+   padding: 0 1px;
+   /* Adds minimal horizontal padding between list items. */
+   list-style: none;
+   /* Removes default bullet points for list items. */
+}
+
+.footer-column4 li {
+   display: inline-block;
+   /* Displays list items inline for horizontal alignment. */
+}
+
+footer a {
+   color: #fff;
+   /* Sets link text color to white. */
+   text-decoration: none;
+   /* Removes default underline for links. */
+}
+
+.footer-column2 a {
+   color: #eff216;
+   /* Sets a distinct yellow color for navigation links. */
+   border-bottom: 2px solid rgb(247, 247, 45);
+   /* Adds an underline effect with a matching color. */
+}
+
+footer a:hover {
+   text-decoration: underline;
+   /* Adds underline on hover to indicate interactivity. */
+}
+
+.footer-column2 a:hover {
+   color: #ff9900;
+   /* Changes link color to orange on hover for emphasis. */
+}
+
+footer img {
+   width: 40px;
+   /* Sets a fixed width for images to maintain uniformity. */
+   height: 40px;
+   /* Sets a fixed height while maintaining aspect ratio. */
+   margin: 1px;
+   /* Adds minimal spacing around images. */
+   object-fit: cover;
+   /* Ensures images fill the designated space without distortion. */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet: 768px to 1199px */
+@media (max-width: 1199px) and (min-width: 768px) {
+   footer {
+      grid-template-columns: 1fr 1fr 1fr;
+      /* Adjusts layout to three columns for tablets. */
+      grid-template-rows: auto auto;
+      /* Creates two rows for better distribution of content. */
+   }
+
+   .footer-column1 {
+      grid-column: 1;
+      /* Places the first column in the first grid area. */
+      grid-row: span 2;
+      /* Spans this column across both rows. */
+   }
+
+   .footer-column2 {
+      grid-column: 2;
+      /* Places the second column in the second grid area. */
+      grid-row: 1;
+      /* Places it in the first row. */
+   }
+
+   .footer-column5 {
+      grid-column: 2;
+      grid-row: 2;
+      /* Places this column in the second row, second column. */
+   }
+
+   .footer-column3,
+   .footer-column4 {
+      grid-column: 3;
+      /* Places these columns in the third grid area. */
+      grid-row: span 2;
+      /* Spans both rows for a vertical layout. */
+   }
+}
+
+/* Big Phone (Phablet): 576px to 767px */
+@media (max-width: 767px) and (min-width: 576px) {
+   footer {
+      grid-template-columns: 1fr 1fr;
+      /* Adjusts layout to two columns for smaller screens. */
+   }
+
+   .footer-column2 {
+      grid-column: 1 / 2;
+      order: 1;
+      /* Places this column in the first order for the layout. */
+   }
+
+   .footer-column1 {
+      grid-column: 1 / 2;
+      order: 2;
+      /* Places this column second in the layout. */
+   }
+
+   .footer-column3,
+   .footer-column4 {
+      grid-column: 2 / 2;
+      order: 1;
+      /* Places these columns together in the second grid column. */
+   }
+
+   .footer-column5 {
+      grid-column: 2 / 2;
+      order: 2;
+      /* Places this column last in the layout. */
+   }
+}
+
+/* Small Phone: <= 575px */
+@media (max-width: 575px) {
+   footer {
+      grid-template-columns: 1fr;
+      /* Switches to a single-column layout for small screens. */
+   }
+
+   .footer-column1 {
+      order: 1;
+      /* Places this column first in the layout. */
+   }
+
+   .footer-column5 {
+      order: 2;
+      /* Places this column second in the layout. */
+   }
+}
+
+/*  part 7 ------------------------------------------------------------ */
+@media print {
+   /* Styles optimized for print view */
+
+   body {
+      font-size: 12px;
+      /* Sets a smaller, readable font size specifically for printed pages. */
+      color: #000;
+      /* Ensures all text is printed in black for maximum legibility. */
+      background: #fff;
+      /* Removes any background color or image to save printer ink and ensure a clean white background. */
+   }
+
+   header,
+   footer,
+   .search-bar,
+   .banner,
+   .subscription {
+      display: none;
+      /* Hides sections not relevant to printed content (e.g., navigation, search bars, banners) to keep the focus on the main content. */
+   }
+
+   .products {
+      grid-template-columns: repeat(2, 1fr);
+      /* Reduces the grid to two columns for a more compact layout suitable for printing. */
+      gap: 10px;
+      /* Decreases spacing between product items to use page space efficiently. */
+   }
+
+   .product {
+      border: none;
+      /* Removes decorative borders around product items for a simpler printed design. */
+      box-shadow: none;
+      /* Disables shadows, as they don't render well on paper and aren't necessary for print. */
+   }
+}

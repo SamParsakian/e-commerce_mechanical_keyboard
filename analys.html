@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Analysis</title>
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      />
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <!--  ........................................................................-->
+   <body>
+      <header>
+         <div class="logo">
+            <img src="images/keyboard-logo.png" alt="Sam Mechanical Keyboard" />
+            <span><strong>Type Smart, Type Strong.</strong></span>
+         </div>
+         <nav>
+            <ul>
+               <li><a href="/index.html">Start</a></li>
+               <li><a href="/analys.html">Analysis</a></li>
+               <li><a href="/analysInSwedish.html">analysInSwedish</a></li>
+               <li><a href="#">Switches </a></li>
+               <li><a href="#">On&nbsp;Sale</a></li>
+               <li><a href="#">News</a></li>
+            </ul>
+         </nav>
+         <div class="search-bar">
+            <input type="text" placeholder="Search product" />
+         </div>
+      </header>
+
+      <section class="banner">
+         <img src="images/banner1.jpg" alt="Shop banner" />
+         <h1>Buy<br />Mechanical Keyboard</h1>
+      </section>
+      <!--  ........................................................................-->
+      <main class="questions">
+         <div class="header">
+            <h3>Analysis Text by Samuel Parsakian</h3>
+            <p>
+               Examination Assignment in Web Development with HTML & CSS -
+               WUH100
+            </p>
+            <p>1985-08-28</p>
+            <div class="line"></div>
+         </div>
+
+         <section>
+            <h1>1. Introduction</h1>
+            <p>
+               The purpose of the task was to build a responsive webpage that
+               showcases products, is user-friendly, and visually appealing. I
+               used HTML and CSS to structure and style the page, focusing on
+               implementing good web development practices such as layout,
+               typography, and optimization.(<strong>
+                  Note; Although comments in HTML and CSS serve a completely
+                  different purpose, I decided to include more detailed
+                  explanations within the HTML and CSS files as comments to
+                  clarify the reasons behind using these queries. </strong
+               >)
+            </p>
+         </section>
+
+         <section>
+            <h1>2. Programming Choices</h1>
+            <p>
+               I built the page using HTML5 for the structure and CSS for the
+               styling. To make sure the design looks consistent across
+               different browsers, I started with Normalize.css to reset the
+               default styles.
+            </p>
+
+            <h3>2.1 HTML5</h3>
+            <p>
+               Following the example project, I used HTML5 to add several
+               features: a header with a logo, a navigation menu, and a search
+               bar for quick access to key sections. The main section of the
+               page includes a banner that highlights the store's purpose,
+               followed by a product gallery showing images, descriptions, and
+               prices for easy comparison. There’s also a subscription section
+               to encourage visitors to sign up for the newsletter.
+            </p>
+            <p>
+               The footer is divided into columns that provide detailed
+               information about the brand, navigation links, contact details,
+               and social media icons. This layout creates a smooth flow from
+               introduction to interaction, making it simple for visitors to
+               browse the page and connect with the content.
+            </p>
+         </section>
+
+         <h3>2.2 CSS Reset</h3>
+         <p>
+            I used Normalize.min.css to make sure the webpage looks consistent
+            across different browsers. It’s a common and recommended practice
+            for achieving uniform rendering. As MDN Web Docs explains, "If you
+            feel you truly need to use a reset, consider using Normalize.css by
+            Nicolas Gallagher, which aims to make things more consistent across
+            browsers" (MDN Web Docs, 2025).
+         </p>
+         <p>
+            To keep things consistent and easy to maintain, I used an external
+            style.css file with the HTML structure. This stylesheet handles the
+            visual design of the page, like typography, layout, and
+            responsiveness, while keeping content and design separate. Key parts
+            of the page, such as the header, product gallery, and footer, were
+            styled to create a unified and professional look.
+         </p>
+
+         <h3>2.3 Box Model</h3>
+         <p>
+            "box-sizing: border-box;" was used, by implementing margins,
+            padding, and borders are included in the total size of elements.
+            This was especially important for matching the example project, like
+            aligning lists in the footer directly under the relevant headings by
+            adjusting padding and margins.Following is an image of chrome
+            browser's box Model, taking from ul elements in footer. And again
+            same story here and there for achieving same desiered result for
+            alignments.
+         </p>
+         <img src="/images/analys1.jpg" alt="" />
+
+         <h3>2.4 Units</h3>
+         <p>
+            To make the design responsive, I used pixels (px) for fixed sizes
+            like the logo, while percentages or viewport width units (vw) were
+            used for flexible elements. For example, the banner image was set to
+            auto for its width and 100% for its height, allowing it to adjust
+            smoothly to different screen sizes. I also added CSS breakpoints to
+            change the layout based on specific viewport widths for better
+            adaptability.
+         </p>
+
+         <ul>
+            <li>Desktop: min-width: 1200px</li>
+            <li>Tablet: min-width: 768px and max-width: 1199px</li>
+            <li>
+               Large phones (Phablet): min-width: 576px and max-width: 767px
+            </li>
+            <li>Small phones: max-width: 575px</li>
+         </ul>
+         <p>
+            These breakpoints help optimize the viewing experience across a wide
+            range of devices (Hoverify, 2024).
+         </p>
+
+         <section>
+            <h1>3. Layout</h1>
+            <p>
+               In my CSS file, I used various layout techniques to make the
+               webpage responsive and well-organized. For instance, I used the
+               @font-face rule to include custom fonts like "Selawik," which
+               adds typographic consistency to the page. In the header, I
+               applied Flexbox with "display: flex;" to align the logo,
+               navigation menu, and search bar in a horizontal layout, ensuring
+               flexibility and adaptability. For the .products class, I used CSS
+               Grid Layout with "display: grid;" and "grid-template-columns:
+               repeat(4, 1fr);" to create a product gallery. The number of
+               columns adjusts automatically based on the screen size for the
+               best display across devices.
+            </p>
+
+            <h3>3.1 Navigation</h3>
+            <p>
+               I removed the default list styles from the navigation links by
+               setting "list-style-type: none;" and cleared default margins and
+               padding with "margin: 0;" and "padding: 0;". To arrange the
+               navigation links in a horizontal line, I applied "display: flex;"
+               to the "ul" element, making it easy to align and space the items.
+               Each "a" tag in the navigation was styled with "display: block;",
+               "padding: 10px 15px;", "text-decoration: none;", "border: 2px
+               solid #000;", "border-radius: 5px;", "color: #000;", and
+               "background-color: #f9f9f9;" to give it a button-like appearance.
+               For interactivity, I added a hover effect using "nav a:hover {
+               background-color: #000; color: #fff; }", which changes the
+               background and text colors when the user hovers over the links.
+            </p>
+         </section>
+
+         <h3>3.2 Footer</h3>
+         <p>
+            I designed the footer using CSS Grid Layout by setting "display:
+            grid;" and "grid-template-columns: repeat(4, 1fr);", which creates
+            four equal columns for neatly distributing the content. To make it
+            responsive, I used media queries to reduce the number of columns on
+            smaller screens, ensuring the footer remains user-friendly across
+            different devices.This method aligns with established best practices
+            for responsive footer design, as discussed in "Building a Responsive
+            Footer: A Guide to HTML and CSS Techniques" (Musing, 2025).
+         </p>
+
+         <h3>3.3 CSS Grid</h3>
+         <p>
+            I used CSS Grid Layout to design a responsive layout. In the
+            .products section, I set up a grid container with "display: grid;"
+            and defined the columns using "grid-template-columns: repeat(4,
+            1fr);", creating four evenly spaced columns. To make the layout
+            adaptable for different screen sizes, I added media queries that
+            adjust the number of columns based on the viewport width.
+         </p>
+
+         <h3>3.4 Flexbox</h3>
+         <p>
+            I used the Flexbox layout to create a responsive and flexible
+            structure. In the header section, I applied "display: flex;" to set
+            up a flex container, which allowed the child elements—like the logo,
+            navigation menu, and search bar—to align horizontally.These Flexbox
+            properties contribute to a clean and adaptable layout, enhancing
+            responsiveness across different screen sizes (Coyier, 2024).
+         </p>
+
+         <h3>3.5 Spacing</h3>
+         <p>
+            I used margin and padding to ensure readable spacing. For instance,
+            product cards were given "padding: 10px;" to create space around
+            their content and "gap: 20px;" to keep the cards nicely separated.
+         </p>
+
+         <h3>3.6 Typography</h3>
+         <p>
+            II used custom fonts with "@font-face" and set 16px as the base font
+            size. For better readability, I applied "font-weight: 800;" to
+            headings and "line-height: 1.6;" to paragraphs.
+         </p>
+
+         <section>
+            <h1>4. Breakpoints</h1>
+            <p>
+               I used media queries to set breakpoints at 1200px, 768px, and
+               575px. On smaller screens, the number of product columns reduces
+               to two and eventually one, and the header elements stack
+               vertically for better usability.
+            </p>
+         </section>
+
+         <section>
+            <h1>5. Image Optimization</h1>
+            <p>
+               I optimized the images by applying "max-width: 100%;" and
+               "height: auto;" to make sure they adjust properly to the
+               available space without exceeding their container's width. This
+               approach was used for elements such as product images and the
+               banner image, enabling them to scale seamlessly and maintain
+               their aspect ratio across various screen sizes, ensuring a
+               consistent and responsive layout.
+            </p>
+         </section>
+
+         <section>
+            <h1>6. Printing</h1>
+            <p>
+               I customized print settings to create a clean and readable
+               version of the webpage, focusing on key information like product
+               lists while hiding non-essential elements such as headers,
+               banners, and search fields. For example, I used a two-column
+               layout to make product details clear and easy to read on standard
+               A4 paper. However, the footer may still appear in the printed PDF
+               due to the browser's default print settings.
+            </p>
+         </section>
+
+         <section>
+            <h1>7. Compatibility</h1>
+            <p>
+               I used modern HTML5 and CSS features, such as Grid and Flexbox,
+               which are compatible with most modern browsers. For example, the
+               page was tested thoroughly in Chrome and Firefox to confirm
+               proper functionality and responsiveness. While some older
+               browsers might not fully support these advanced properties, I
+               took extra steps to check their compatibility using tools like
+               [Can I Use](https://caniuse.com/). This ensured that the webpage
+               would perform well for the majority of users while leveraging the
+               latest web development techniques. Green boxes in following
+               images show the availibility of Flexible box in differnt
+               browser.(Can I Use, 2024).
+            </p>
+            <img src="/images/analys2.jpg" alt="" />
+         </section>
+
+         <section>
+            <h1>8. Bugs and Issues</h1>
+            <p>
+               One challenge I faced was that some elements did not scale
+               properly on smaller screens. To fix this, I adjusted media
+               queries and added "overflow: hidden;" to the banner, preventing
+               layout issues and ensuring a smoother display. Another issue I
+               identified using [W3C
+               Validator](https://validator.w3.org/nu/#file) was the improper
+               use of the "articl>" tag for separating products. The validator
+               highlighted that a "header" was required for each "article"
+               element. To resolve this, I replaced "articl>" with "div" tags,
+               which corrected the problem and improved the semantic accuracy of
+               the HTML structure.
+            </p>
+         </section>
+
+         <section>
+            <h1>9. Summary</h1>
+            <p>
+               I approached this task with a clear goal of building a responsive
+               and visually appealing website, which allowed me to practice and
+               refine key web development skills. The most challenging part was
+               trying to replicate the exact results from the example project,
+               particularly rearranging the footer columns for different screen
+               sizes. Using CSS Grid and Flexbox for the layout was tricky at
+               first, especially making sure the design adapted well to various
+               screen widths. However, structuring the page with HTML5 turned
+               out to be easier than I anticipated, as its elements are
+               intuitive and straightforward. Optimizing images and ensuring
+               browser compatibility took some extra effort, but it was a
+               valuable learning experience. Overall, this project not only
+               helped me improve my technical skills but also boosted my
+               confidence in web development.
+            </p>
+         </section>
+
+         <section>
+            <h1>Referenser</h1>
+            <ul>
+               <li>
+                  Can I Use. (2024, April 7). CSS Flexible Box Layout Module.
+                  Retrieved January 17, 2025, from
+                  https://caniuse.com/?search=flex
+               </li>
+               <li>
+                  Coyier, C. (2024, 12 augusti). CSS flexbox layout guide.
+                  CSS-Tricks. Hämtad 17 januari 2025 från
+                  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+               </li>
+               <li>
+                  Hoverify. (2024, 14 september). Responsive design breakpoints:
+                  2024 guide. Hämtad 17 januari 2025 från
+                  https://tryhoverify.com/blog/responsive-design-breakpoints-2024-guide/
+               </li>
+               <li>
+                  MDN Web Docs. (2025, 17 januari). Guidelines for writing CSS
+                  code examples. Hämtad från
+                  https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
+               </li>
+               <li>
+                  Musing, M. (2025, 17 januari). Building a responsive footer: A
+                  guide to HTML and CSS techniques. Hämtad från
+                  https://basedash.com/blog/responsive-footer-html-css-guide
+               </li>
+            </ul>
+         </section>
+      </main>
+      <!--  ........................................................................-->
+      <footer>
+         <div class="footer-column1">
+            <h3>About Us</h3>
+            <p>
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
+               veritatis, illo fugit labore eos vel neque quia excepturi et quas
+               obcaecati.
+            </p>
+            <p>
+               Amet consectetur adipisicing elit. Nisi veritatis, illo fugit
+               labore eos vel neque quia excepturi et quas obcaecati.
+            </p>
+            <p>
+               Ipsum dolor sit, amet Lorem ipsum dolor sit amet consectetur
+               adipisicing elit. Assumenda sapiente odit facere natus
+               repudiandae ad dolorem unde, sunt eum error ea, modi aliquid
+               doloremque eaque quos non. Molestiae, blanditiis ut. consectetur
+               adipisicing elit. Nisi veritatis, illo fugit labore eos vel neque
+               quia excepturi et quas obcaecati.
+            </p>
+         </div>
+         <div class="footer-column2">
+            <h3>Navigation</h3>
+            <ul>
+               <li><a href="/index.html">Start</a></li>
+               <li><a href="/analys.html">Analysis</a></li>
+               <li><a href="/analysInSwedish.html">analysInSwedish</a></li>
+               <li><a href="#">Switches </a></li>
+               <li><a href="#">On Sale</a></li>
+               <li><a href="#">News</a></li>
+            </ul>
+         </div>
+         <div class="footer-column3">
+            <h3>General Information?</h3>
+            <ul>
+               <li><a href="">Repudiandae sint nobis eius!</a></li>
+               <li><a href="">Lorem, ipsum dolor sit!</a></li>
+               <li><a href="">Amet adipisicing elit!</a></li>
+               <li><a href="">Consectetur totam libero?</a></li>
+               <li><a href="">Vero reprehenderit ipsa!</a></li>
+            </ul>
+
+            <div class="footer-column4">
+               <h3>Social-media</h3>
+               <ul>
+                  <!-- Used an unordered list (<ul>) to group social media links. -->
+                  <li>
+                     <a href="https://www.youtube.com"
+                        ><img src="images/Youtube-icon.png" alt="YouTube"
+                     /></a>
+                     <!-- Used an <img> element inside an <a> tag to provide clickable social media icons. The 'alt' attributes improve accessibility while user can not see image, so this text gives clue what does it there and browser have more efficient access to webpage which is plus in searching content prospective. -->
+                  </li>
+                  <li>
+                     <a href="https://www.facebook.com"
+                        ><img src="images/facebook-icon.png" alt="Facebook"
+                     /></a>
+                  </li>
+                  <li>
+                     <a href="https://www.instagram.com"
+                        ><img src="images/instagram-icon.png" alt="Instagram"
+                     /></a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="footer-column5">
+            <h3>Contacts</h3>
+            <p>123 Street Name, City</p>
+            <p>+1 234 567 890</p>
+         </div>
+      </footer>
+
+      <!--  ........................................................................-->
+   </body>
+</html>
